@@ -1,0 +1,91 @@
+body{
+    background-color: darkkhaki;
+}
+
+.container{
+    width: 70vw;
+    height: 70vh;
+    position: relative;
+    left:10%;
+
+}
+.plant{
+    position: absolute;
+    bottom:20%;
+    top:50%;
+    left:40%;
+}
+.plant-pot{
+    width:150px;
+    height:180px;
+    background-color: rgb(51, 51, 51);
+    position:absolute;
+    z-index: 90;
+}
+
+.plant-top{
+    width:150px;
+    height: 40px;
+    border-radius: 50px 50px 0 0;
+    background-color: rgb(99, 91, 82);
+    position: absolute;
+    top:-10px;
+
+    z-index: 10;
+
+
+}
+
+
+.plant-leaves{
+    width: 60px;
+    height: 120px;
+    position: relative;
+    background-color: rgb(130, 201, 7);
+    top:-200px;
+    left: 25px;
+    border-radius: 100%;
+    z-index: 5;
+
+
+}
+
+.plant-leaves-1 {
+
+    top:-180px;
+    left: 50px;
+    height:200px;
+    background-color: rgb(159, 233, 31);
+    z-index: 1;
+
+    position: relative;
+}
+
+.plant-leaves-2 {
+    transform: rotate(-40deg);
+    top:-300px;
+    left: 20px;
+    position: relative;
+    background-color: rgb(143, 209, 29);
+
+}
+.plant-leaves-3 {
+    transform: rotate(30deg);
+    top:-480px;
+    left: 80px;
+    position: relative;
+    background-color: rgb(130, 200, 10);
+
+}
+
+.smile{
+    background-color: rgb(255, 255, 48);
+    width:100px;
+    height:100px;
+    border-radius: 100%;
+    position: absolute;
+    top: 18%;
+    left: 40%;
+    z-index: 100;
+
+}
