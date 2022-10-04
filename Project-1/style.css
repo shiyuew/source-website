@@ -20,9 +20,10 @@ body{
     background-image:url("step-2/step2_11.jpg");
 }
 
-.container-1:active{
+.container-1:focus{
     background-image:url("step-3/step3_11.jpg");
 }
+
 
 .container-2{
     position: absolute;
@@ -38,7 +39,7 @@ body{
     background-image:url("step-2/step2_22.jpg");
 }
 
-.container-2:active{
+.container-2:focus{
     background-image:url("step-3/step3_22.jpg");
 }
 
@@ -57,7 +58,7 @@ body{
     background-image:url("step-2/step2_33.jpg");
 }
 
-.container-3:active{
+.container-3:focus{
     background-image:url("step-3/step3_33.jpg");
 }
 
@@ -76,7 +77,7 @@ body{
 
 }
 
-.container-4:active{
+.container-4:focus{
     background-image:url("step-3/step3_44.jpg");
 }
 
@@ -90,11 +91,11 @@ body{
     background-size:contain;
     transition: 1s;
 }
-.container-5:hover {
+.container-5:hover{
     background-image:url("step-2/step2_55.jpg");
 }
 
-.container-5:active{
+.container-5:focus{
     background-image:url("step-3/step3_55.jpg");
 }
 
@@ -112,7 +113,7 @@ body{
     background-image:url("step-2/step2_66.jpg");
 }
 
-.container-6:active{
+.container-6:focus{
     background-image:url("step-3/step3_66.jpg");
 }
 
