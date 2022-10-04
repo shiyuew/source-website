@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get your wardrobe back to order</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="steps-container">
+ <div class="images">
+  <img id="previous" src="narrows/left.png">
+<image id="image" src="step-1/step1_1.jpg" width="250px"></image>
+<img id="next" src="narrows/right.png">
+</div>
+
+
+
+
+
+ <image src="step-1/step1_2.jpg" width="250px"></image>
+ <image src="step-1/step1_3.jpg" width="250px"></image>
+ <br>
+ <image src="step-1/step1_4.jpg" width="250px"></image>
+ <image src="step-1/step1_5.jpg" width="250px"></image>
+ <image src="step-1/step1_6.jpg" width="250px"></image>
+
+</div>
+
+
+
+ 
+ 
+
+
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $( document ).ready(function() {
+
+        var images = [
+        "step-1/step1_1.jpg",
+
+            "step-2/step2_1.jpg",
+            "step-3/step3_1.jpg",
+
+            
+      
+        ];
+
+var imageIndex = 0;
+
+        $("#previous").on("click", function(){          
+            imageIndex = (imageIndex + images.length -1) % (images.length);    
+            $("#image").attr('src', images[imageIndex]);
+        });
+
+        $("#next").on("click", function(){
+            imageIndex = (imageIndex+1) % (images.length);    
+            $("#image").attr('src', images[imageIndex]);
+        });
+
+        $("#images").attr(images[0]);
+
+    });
+</script>
+
+</body>
+
+</html>

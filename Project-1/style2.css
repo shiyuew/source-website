@@ -1,0 +1,31 @@
+.steps-container{
+    position: relative;
+    left:300px;
+    top:100px;
+}
+   
+
+img{
+    padding:8px;
+
+}
+
+.images{
+    width:270px;
+    height:270px;
+
+}
+#previous{
+    position: absolute;
+    width: 125px;
+    height: 270px;
+
+}
+
+
+#next{
+    position: absolute;
+    width: 125px;
+    height: 270px;
+    left: 125px;
+}

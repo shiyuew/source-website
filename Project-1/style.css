@@ -1,0 +1,151 @@
+body{
+    background-color:#9F7F51;
+    font-family: "GT Alphina"; 
+    font-size: 20px;
+    line-height: 1.2;
+
+}
+
+.container-1{
+    position: absolute;
+    left:650px;
+    top:150px;
+    background-image:url("step-1/step1_11.jpg");
+    width:250px;
+    height:260px;
+    background-size:contain;
+    transition: 1.5s;
+}
+.container-1:hover {
+    background-image:url("step-2/step2_11.jpg");
+}
+
+.container-1:active{
+    background-image:url("step-3/step3_11.jpg");
+}
+
+.container-2{
+    position: absolute;
+    left:915px;
+    top:150px;
+    background-image:url("step-1/step1_22.jpg");
+    width:250px;
+    height:260px;
+    background-size:contain;
+    transition: 1s;
+}
+.container-2:hover {
+    background-image:url("step-2/step2_22.jpg");
+}
+
+.container-2:active{
+    background-image:url("step-3/step3_22.jpg");
+}
+
+
+.container-3{
+    position: absolute;
+    left:1180px;
+    top:150px;
+    background-image:url("step-1/step1_33.jpg");
+    width:250px;
+    height:260px;
+    background-size:contain;
+    transition: 1s;
+}
+.container-3:hover {
+    background-image:url("step-2/step2_33.jpg");
+}
+
+.container-3:active{
+    background-image:url("step-3/step3_33.jpg");
+}
+
+.container-4{
+    position: absolute;
+    left:650px;
+    top:425px;
+    background-image:url("step-1/step1_44.jpg");
+    width:250px;
+    height:260px;
+    background-size:contain;
+    transition: 1s;
+}
+.container-4:hover {
+    background-image:url("step-2/step2_44.jpg");
+
+}
+
+.container-4:active{
+    background-image:url("step-3/step3_44.jpg");
+}
+
+.container-5{
+    position: absolute;
+    left:915px;
+    top:425px;
+    background-image:url("step-1/step1_55.jpg");
+    width:250px;
+    height:260px;
+    background-size:contain;
+    transition: 1s;
+}
+.container-5:hover {
+    background-image:url("step-2/step2_55.jpg");
+}
+
+.container-5:active{
+    background-image:url("step-3/step3_55.jpg");
+}
+
+.container-6{
+    position: absolute;
+    left:1180px;
+    top:425px;
+    background-image:url("step-1/step1_66.jpg");
+    width:250px;
+    height:260px;
+    background-size:contain;
+    transition: 1s;
+}
+.container-6:hover {
+    background-image:url("step-2/step2_66.jpg");
+}
+
+.container-6:active{
+    background-image:url("step-3/step3_66.jpg");
+}
+
+.text{
+    width: 400px;
+    margin-left: 50px;
+    margin-top:150px;
+    color:white;
+    text-align: left;
+    
+ 
+}
+
+p{
+    color:white;
+    text-align: left;
+  
+}
+
+.italic{
+    font-family: "GT Alphina"; italic;
+    src: url("GT-Alpina-Standard-Thin-Italic.otf") format("truetype");
+
+
+
+}
+@font-face {
+    font-family: "GT Alphina";
+    src: url("GT-Alpina-Thin-Trial.otf") format("truetype");
+  }
+img{
+    padding:8px;
+
+}
+
+
