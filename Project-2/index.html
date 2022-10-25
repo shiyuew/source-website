@@ -3,14 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="style.css" rel="stylesheet">
+  <title>Find your cursor</title>
+
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <details>
 
-  </details>
-</body>
+<h1>
+  Find your cursor
+</h1>
+ 
+  <style>
+              body {
+                  width: 100vw;
+                  height: 100vh;
+                  background-image: url(cursor2.gif);
+                  background-size: clamp(100px, calc(var(--mouse-y) / 100 * 100px), 100vmin) auto;
+                  background-position: calc(var(--mouse-x) * 1px) 50%;
+                  image-rendering: pixelated;
+                  overflow: hidden;
+              }
+              h1 {
+                font-family:"Space";
+                font-size: 25px;
+              }
+              @font-face {
+                font-family:"Space";
+                src: url(SpaceGrotesk-Regular.ttf) format("truetype");
+              }
+          </style>
 
+
+ 
+  <script>
+          let root = document.documentElement;
+          root.addEventListener('mousemove', e => {
+              root.style.setProperty('--mouse-x', e.clientX);
+              root.style.setProperty('--mouse-y', e.clientY);
+          });
+          </script>
+  </body>
 </html>
