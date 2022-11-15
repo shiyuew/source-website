@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ambient</title>
+<style>
+    p{
+        font-size:100px;
+        font-family: sans-serif;
+        text-align:center;
+        /* animation: gradient 1s ease infinite; */
+    }
+    body{
+        background:linear-gradient(0.25turn, #0D3CD1, #A2D4ED, #4698C6, #A2D4ED, #0D3CD1;);
+        animation-name: linearGradient;
+        /* animation-duration: 3s; */
+        animation-iteration-count: infinite;
+        height:100vh;
+    }
+    #content{
+        position: absolute;
+        bottom:20%;
+        left:38%;
+
+    }
+
+    @keyframes blink{
+        0%{
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 0.0;
+        }
+        100%{
+            opacity: 1.0;
+        }
+    }
+
+    @keyframes linearGradient{
+        0% {
+            background-position: 0vw 0vw;
+        }
+        50% {
+            background-position: 100vw 0vw;
+        }
+        100% {
+            background-position: 0vw 0vw;
+        }
+    }
+</style>
+</head>
+<body>
+ <div id="content">
+<p id="currentTemperature"></p>
+<p id="currentTime"></p>
+</div>
+
+<script>
+    let tempE1 = document.querySelector('#currentTemperature');
+    const url = 'https://api.open-meteo.com/v1/forecast?latitude=40.71&longitude=-74.01&current_weather=true&temperature_unit=fahrenheit';
+
+    fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data);
+        let currentTemp = data['current_weather']['temperature'];
+        tempE1.innerText = '(' + currentTemp+ '°'+ '😨' + ')';
+        if (currentTemp > 60) {
+            document.body.style.background = 'orange'; 
+        }
+        else{
+            //tempE1.style.color = 'white'
+            document.body.style.background = 'linear-gradient(0.25turn, #0D3CD1, #A2D4ED, #4698C6, #A2D4ED, #0D3CD1)';
+            document.body.style.color = '#0D3CD1';
+        }
+                // console.log(data['current_weather']['windspeed'])
+        let windspeed = data['current_weather']['windspeed'];
+        document.body.style.animationDuration = windspeed + 's';
+
+    });
+
+    
+//    fetch(url)
+//     .then((response) => response.json())
+//     .then((data) => {
+//         console.log(data);
+//         let currentTime = data['hourly']['time'];
+//         hourly.innerText = currentTime;+'🕒'
+//     });
+let hourly = document.querySelector('#currentTime');
+let now = new Date();
+hourly.innerText = '(' + now.getHours()+':' + now.getMinutes() + '🕒' + ')';
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talk to Me</title>
+  <style>
+    .big-type {
+      color: green;
+      font-size: 68px;
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 25vh;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <div class="form-example">
+      <label for="color-input">Enter a color: </label>
+      <input name="color-input" id="color">
+    </div>
+    <div class="form-example">
+      <label for="column-input">Select number of columns: </label>
+      <input type="range" value="1" min="1" max="12" name="column-input" id="columns">
+    </div>
+    <div class="form-example">
+      <label for="name-input">Enter a name: </label>
+      <input name="name-input" id="name">
+    </div>
+  </form>
+  <div class="text">
+    <p>You don't want to kill all your dark areas they are very important. Here's another little happy bush Nothing's gonna make your husband or wife madder than coming home and having a snow-covered dinner. We don't need any guidelines or formats. All we need to do is just let it flow right out of us.</p>
+    <p>Let's get crazy. Volunteering your time; it pays you and your whole community fantastic dividends. We'll throw some old gray clouds in here just sneaking around and having fun. Maybe there was an old trapper that lived out here and maybe one day he went to check his beaver traps, and maybe he fell into the river and drowned. Follow the lay of the land. It's most important.</p>
+    <p>We touch the canvas, the canvas takes what it wants. Just pretend you are a whisper floating across a mountain. You can do anything here - the only pre-requisite is that it makes you happy. Talent is a pursued interest. That is to say, anything you practice you can do.</p>
+    <p>Just let go - and fall like a little waterfall. Fluff it up a little and hypnotize it. It is a lot of fun. Let's have a little bit of fun today.</p>
+    <p>No worries. No cares. Just float and wait for the wind to blow you around. Trees cover up a multitude of sins. Let's put some happy little bushes on the other side now. Let's do that again.</p>
+    <p>It's hard to see things when you're too close. Take a step back and look. Just go back and put one little more happy tree in there. Anything you want to do you can do here. We have a fantastic little sky!</p>
+    <p>There we are. That's crazy. We artists are a different breed of people. We're a happy bunch. Didn't you know you had that much power? You can move mountains. You can do anything. It's beautiful - and we haven't even done anything to it yet.</p>
+  </div>
+  <div class="big-type">
+    Your name here
+  </div>
+  <script>
+    // Get the input element
+    let inputEl = document.querySelector('#color');
+
+    // Add an event listener that handles input events from the user
+    inputEl.addEventListener('input', () => {
+      // Get the current value of input
+      let value = inputEl.value;
+
+      // How do we set the background color of the body?
+      // Get the body element.
+      let bodyEl = document.querySelector('body');
+
+      // Set the background color.
+      bodyEl.style.backgroundColor = value;
+    });
+    
+    let columnInputEl = document.querySelector('#columns');
+    columnInputEl.addEventListener('input', () => {
+      let value = columnInputEl.value;
+      let textEl = document.querySelector('.text');
+      textEl.style.columns = value;
+    });
+
+    let nameInputEl = document.querySelector('#name');
+    nameInputEl.addEventListener('input', () => {
+      let value = nameInputEl.value;
+      let nameEl = document.querySelector('.big-type');
+      nameEl.innerText = value;
+    });
+
+    let fontSize = 10;
+
+    window.addEventListener('keydown', (event) => {      
+      let key = event.key;
+      let nameEl = document.querySelector('.big-type');
+      nameEl.style.letterSpacing = key + 'em';
+      nameEl.style.opacity = key/10;
+
+      fontSize = fontSize + 5;
+      nameEl.style.fontSize = fontSize + 'px';
+    });
+  </script>
+</body>
+</html>
