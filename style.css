@@ -29,10 +29,9 @@ body{
     cursor: pointer;
 
 }
-
 .heading-text{
     /* text-align: center; */
-    font-size: 45px;
+    font-size: 48px;
 
     /* align:center; */
     color:rgb(33, 255, 159);
@@ -82,32 +81,9 @@ body{
 
 }
 
-
-.projects{
-    position: absolute;
-    left:600px;
-    top:350px;
-}
-
-a:link {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-a:visited{
-    text-decoration: none;
-    color:black;
-}
-a:hover{
-    text-decoration: none;
-    color:coral;
-}
-li{
-    list-style-type: none;
-    text-align:left;
-    font-size: 40px;
-    margin-left: -40px;
-}
-
 .wrapper:hover{
-
+background-color:rgb(33, 255, 159);
+}
+.heading-text:hover{
+    color:rgb(254, 112, 4);
 }
