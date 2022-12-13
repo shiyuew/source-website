@@ -142,6 +142,7 @@ body{
 .feminism:hover:after{
     content:'Feminism';
 } 
+
 .linethrough{
     text-decoration: line-through;
 }
